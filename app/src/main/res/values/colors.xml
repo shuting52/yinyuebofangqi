@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 主色（类似酷我的清新蓝紫） -->
+    <color name="primary">#3F51B5</color>
+    <color name="primary_dark">#303F9F</color>
+    <color name="primary_light">#C5CAE9</color>
+    <color name="accent">#FF6B9D</color>
+
+    <!-- 播放页深色背景 -->
+    <color name="player_bg_start">#2B2F4A</color>
+    <color name="player_bg_end">#141627</color>
+
+    <!-- 歌词高亮色 -->
+    <color name="lyric_highlight">#FFD740</color>
+    <color name="lyric_normal">#B3B3B3</color>
+
+    <!-- 文字 -->
+    <color name="text_primary">#333333</color>
+    <color name="text_secondary">#999999</color>
+</resources>

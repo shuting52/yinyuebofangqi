@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">乐听音乐</string>
+    <string name="update_install_failed">安装失败，请到文件管理器中手动安装</string>
+</resources>

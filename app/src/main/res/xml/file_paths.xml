@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- 更新 APK 下载到 cache/update/ 目录 -->
+    <cache-path
+        name="update_cache"
+        path="update/" />
+</paths>
