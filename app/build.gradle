@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.loomy.musicplayer'
+    namespace 'com.landeting'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.loomy.musicplayer"
+        applicationId "com.landeting"
         minSdk 24
         targetSdk 34
         versionCode 1

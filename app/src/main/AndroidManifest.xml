@@ -25,7 +25,7 @@
         android:icon="@drawable/ic_app_icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MusicPlayer">
+        android:theme="@style/Theme.Landeting">
 
         <!-- 主界面：本地音乐 + 底部迷你播放条 -->
         <activity
@@ -47,7 +47,7 @@
         <activity
             android:name=".PlayerActivity"
             android:exported="false"
-            android:theme="@style/Theme.MusicPlayer.Player" />
+            android:theme="@style/Theme.Landeting.Player" />
 
         <!-- 后台播放服务 -->
         <service

@@ -8,7 +8,7 @@ AIGC:
   PropagateID: 1c2084d8-18f0-45cf-9649-3e56c0321668:art_59bccfa2ca8acfcdac3273c03fb228d8
   ReservedCode2: ""
 ---
-# 乐听音乐（MusicPlayer）
+# 懒得听（Landeting）
 
 一个功能完整的安卓音乐播放器，界面与交互参考酷我音乐：**本地音乐 + 在线音乐 + 歌词滚动 + 后台播放 + 通知栏控制**。
 
@@ -32,7 +32,7 @@ AIGC:
 ```
 app/src/main/
 ├── AndroidManifest.xml              # 权限、Activity、Service、Receiver 声明
-├── java/com/loomy/musicplayer/
+├── java/com/landeting/
 │   ├── MainActivity.java            # 主界面：本地音乐列表 + 迷你播放条
 │   ├── SearchActivity.java          # 在线音乐搜索 + 下载
 │   ├── PlayerActivity.java          # 全屏播放页：封面旋转 + 歌词滚动 + 播放模式
@@ -64,14 +64,14 @@ app/src/main/
 
 方式一：Android Studio（推荐）
 
-1. 用 Android Studio 打开本项目根目录（`MusicPlayer/`）
+1. 用 Android Studio 打开本项目根目录（`Landeting/`）
 2. 等待 Gradle 同步完成（首次会自动下载依赖，需要联网）
 3. 连接设备后点击 ▶ Run，或构建 APK：`Build → Build APK(s)`
 
 方式二：命令行构建
 
 ```bash
-cd MusicPlayer
+cd Landeting
 # 需要本机已安装 JDK 17 与 Android SDK（配置好 ANDROID_HOME）
 # 若没有 gradlew，先用 Android Studio 打开项目同步一次（会自动生成），
 # 或在本机安装 Gradle 8.x 后执行：
@@ -84,7 +84,7 @@ gradle assembleDebug
 1. **首次启动**：会请求“读取媒体文件”权限（Android 13+ 还会请求通知权限），授权后自动扫描本地音乐。
 2. **播放本地音乐**：点击列表任意歌曲，进入全屏播放页；底部迷你播放条常驻，随时返回列表。
 3. **在线听歌**：右上角放大镜图标进入在线音乐，输入关键词搜索；点击结果即可在线播放（自动解析真实播放地址）。
-4. **下载歌曲**：搜索结果的下载按钮，保存到 `Android/data/com.loomy.musicplayer/files/MusicPlayer/`。
+4. **下载歌曲**：搜索结果的下载按钮，保存到 `Android/data/com.landeting/files/Landeting/`。
 5. **歌词**：播放页中部自动滚动高亮；在线歌曲自动加载，本地歌曲尝试读取同名 `.lrc` 文件或内嵌歌词。
 6. **通知栏**：播放后下拉通知栏即可控制，锁屏界面同样可操作。
 
@@ -113,19 +113,27 @@ gradle assembleDebug
 - **图片加载**：Glide（网络封面），本地歌曲使用矢量“黑胶唱片”占位图。
 - **权限适配**：Android 13+ 用 `READ_MEDIA_AUDIO`，旧版本用 `READ_EXTERNAL_STORAGE`，均已处理。
 
-## 版本更新（配套后台控制台）
+## 版本更新（配套后台更新控制台）
 
-本项目附带轻量**后台更新控制台**（`outputs/UpdateServer/`，纯 Python 零依赖）：
+本项目附带一站式**后台更新控制台**（`update-console/update_console.py`，纯 Python 标准库、零依赖），
+覆盖「构建 → 提版本 → 发布 → 发布到 GitHub」完整链路：
 
-1. 部署：`python3 update_server.py init && python3 update_server.py serve`
-2. 发布新版：`python3 update_server.py publish --server http://IP:8000 --token 密钥 --apk xxx.apk --version-code 2 --version-name 2.0 --changelog "..."`
-3. App 端：把 `utils/UpdateChecker.java` 里的 `UPDATE_SERVER` 改为服务器地址，重新打包。
+1. 初始化：`python3 update_console.py init`
+2. 查看版本：`python3 update_console.py version`
+3. 提升版本号：`python3 update_console.py bump --version-name 2.0 --version-code 2`
+4. 构建 APK：`python3 update_console.py build`（需本机 JDK 17 + Android SDK）
+5. 发布到自建服务器：终端 A 运行 `python3 update_console.py serve`，
+   终端 B 运行 `python3 update_console.py publish --apk xxx.apk --changelog "..."`
+6. 发布到 GitHub Releases：`GITHUB_TOKEN=xxx python3 update_console.py release --apk xxx.apk --changelog "..."`
+7. App 端：把 `utils/UpdateChecker.java` 里的 `UPDATE_SERVER` 改为服务器地址，重新打包。
    之后 App 启动时若发现服务器 `versionCode` 更高，会自动提示更新并下载安装。
+
+详细用法见 `update-console/README.md`。
 
 ## 常见问题
 
 - **搜索没结果**：多为酷我接口变动或网络问题，查看 Logcat 中 `KuWoApi` 的日志。
-- **通知栏不显示**：Android 13+ 需要在系统设置中允许“乐听音乐”发送通知。
+- **通知栏不显示**：Android 13+ 需要在系统设置中允许“懒得听”发送通知。
 - **本地扫不到歌**：确认已授予存储权限；部分厂商系统（MIUI/HarmonyOS）需在设置中开启“允许访问所有文件”。
 
 内容由AI生成

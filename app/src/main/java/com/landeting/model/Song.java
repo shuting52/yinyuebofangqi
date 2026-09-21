@@ -1,4 +1,4 @@
-package com.loomy.musicplayer.model;
+package com.landeting.model;
 
 import android.net.Uri;
 

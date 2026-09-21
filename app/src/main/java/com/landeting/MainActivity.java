@@ -1,4 +1,4 @@
-package com.loomy.musicplayer;
+package com.landeting;
 
 import android.Manifest;
 import android.app.AlertDialog;
@@ -21,11 +21,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.loomy.musicplayer.adapter.SongAdapter;
-import com.loomy.musicplayer.model.Song;
-import com.loomy.musicplayer.utils.MusicScanner;
-import com.loomy.musicplayer.utils.PlayerManager;
-import com.loomy.musicplayer.utils.UpdateChecker;
+import com.landeting.adapter.SongAdapter;
+import com.landeting.model.Song;
+import com.landeting.utils.MusicScanner;
+import com.landeting.utils.PlayerManager;
+import com.landeting.utils.UpdateChecker;
 
 import java.io.File;
 import java.util.List;

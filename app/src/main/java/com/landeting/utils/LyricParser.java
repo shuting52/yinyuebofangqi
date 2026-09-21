@@ -1,6 +1,6 @@
-package com.loomy.musicplayer.utils;
+package com.landeting.utils;
 
-import com.loomy.musicplayer.model.LyricLine;
+import com.landeting.model.LyricLine;
 
 import java.util.ArrayList;
 import java.util.Collections;

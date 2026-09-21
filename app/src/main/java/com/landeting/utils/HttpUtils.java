@@ -1,4 +1,4 @@
-package com.loomy.musicplayer.utils;
+package com.landeting.utils;
 
 import android.util.Log;
 

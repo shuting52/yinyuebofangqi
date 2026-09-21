@@ -1,4 +1,4 @@
-package com.loomy.musicplayer;
+package com.landeting;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,11 +20,11 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.loomy.musicplayer.adapter.SongAdapter;
-import com.loomy.musicplayer.api.KuWoApi;
-import com.loomy.musicplayer.model.Song;
-import com.loomy.musicplayer.utils.HttpUtils;
-import com.loomy.musicplayer.utils.PlayerManager;
+import com.landeting.adapter.SongAdapter;
+import com.landeting.api.KuWoApi;
+import com.landeting.model.Song;
+import com.landeting.utils.HttpUtils;
+import com.landeting.utils.PlayerManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -203,7 +203,7 @@ public class SearchActivity extends AppCompatActivity {
                 return;
             }
             // 2. 下载到应用私有外部目录（无需额外权限）
-            java.io.File dir = new java.io.File(getExternalFilesDir(null), "MusicPlayer");
+            java.io.File dir = new java.io.File(getExternalFilesDir(null), "Landeting");
             String safeName = song.getTitle().replaceAll("[\\\\/:*?\"<>|]", "_");
             java.io.File target = new java.io.File(dir, safeName + ".mp3");
             boolean ok = HttpUtils.download(playUrl, target.getAbsolutePath());

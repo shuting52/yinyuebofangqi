@@ -1,4 +1,4 @@
-package com.loomy.musicplayer;
+package com.landeting;
 
 import android.app.Notification;
 import android.app.NotificationChannel;
@@ -18,8 +18,8 @@ import androidx.core.app.NotificationCompat;
 import androidx.core.app.ServiceCompat;
 import androidx.core.content.ContextCompat;
 
-import com.loomy.musicplayer.model.Song;
-import com.loomy.musicplayer.utils.PlayerManager;
+import com.landeting.model.Song;
+import com.landeting.utils.PlayerManager;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -35,12 +35,12 @@ import java.util.concurrent.Executors;
 public class PlaybackService extends Service {
 
     // ---- 动作常量 ----
-    public static final String ACTION_PLAY = "com.loomy.musicplayer.action.PLAY";
-    public static final String ACTION_TOGGLE = "com.loomy.musicplayer.action.TOGGLE";
-    public static final String ACTION_NEXT = "com.loomy.musicplayer.action.NEXT";
-    public static final String ACTION_PREV = "com.loomy.musicplayer.action.PREV";
-    public static final String ACTION_STOP = "com.loomy.musicplayer.action.STOP";
-    public static final String ACTION_OPEN_PLAYER = "com.loomy.musicplayer.action.OPEN_PLAYER";
+    public static final String ACTION_PLAY = "com.landeting.action.PLAY";
+    public static final String ACTION_TOGGLE = "com.landeting.action.TOGGLE";
+    public static final String ACTION_NEXT = "com.landeting.action.NEXT";
+    public static final String ACTION_PREV = "com.landeting.action.PREV";
+    public static final String ACTION_STOP = "com.landeting.action.STOP";
+    public static final String ACTION_OPEN_PLAYER = "com.landeting.action.OPEN_PLAYER";
 
     private static final String CHANNEL_ID = "music_playback_channel";
     private static final int NOTIFICATION_ID = 1001;

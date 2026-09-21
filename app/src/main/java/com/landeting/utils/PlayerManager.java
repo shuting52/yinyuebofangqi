@@ -1,4 +1,4 @@
-package com.loomy.musicplayer.utils;
+package com.landeting.utils;
 
 import android.media.AudioAttributes;
 import android.media.MediaPlayer;
@@ -6,8 +6,8 @@ import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
 
-import com.loomy.musicplayer.api.KuWoApi;
-import com.loomy.musicplayer.model.Song;
+import com.landeting.api.KuWoApi;
+import com.landeting.model.Song;
 
 import java.io.IOException;
 import java.util.ArrayList;

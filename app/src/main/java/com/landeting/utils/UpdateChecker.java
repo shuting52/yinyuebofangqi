@@ -1,4 +1,4 @@
-package com.loomy.musicplayer.utils;
+package com.landeting.utils;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,7 +11,7 @@ import androidx.core.content.FileProvider;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.loomy.musicplayer.R;
+import com.landeting.R;
 
 import java.io.File;
 

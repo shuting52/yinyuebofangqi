@@ -1,4 +1,4 @@
-package com.loomy.musicplayer.api;
+package com.landeting.api;
 
 import android.util.Log;
 
@@ -6,8 +6,8 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.loomy.musicplayer.model.Song;
-import com.loomy.musicplayer.utils.HttpUtils;
+import com.landeting.model.Song;
+import com.landeting.utils.HttpUtils;
 
 import java.util.ArrayList;
 import java.util.List;

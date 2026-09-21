@@ -1,4 +1,4 @@
-package com.loomy.musicplayer;
+package com.landeting;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

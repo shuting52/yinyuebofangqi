@@ -1,4 +1,4 @@
-package com.loomy.musicplayer;
+package com.landeting;
 
 import android.animation.ObjectAnimator;
 import android.app.AlertDialog;
@@ -24,11 +24,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import com.bumptech.glide.Glide;
-import com.loomy.musicplayer.api.KuWoApi;
-import com.loomy.musicplayer.model.LyricLine;
-import com.loomy.musicplayer.model.Song;
-import com.loomy.musicplayer.utils.LyricParser;
-import com.loomy.musicplayer.utils.PlayerManager;
+import com.landeting.api.KuWoApi;
+import com.landeting.model.LyricLine;
+import com.landeting.model.Song;
+import com.landeting.utils.LyricParser;
+import com.landeting.utils.PlayerManager;
 
 import java.io.BufferedReader;
 import java.io.File;

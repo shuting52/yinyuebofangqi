@@ -1,4 +1,4 @@
-package com.loomy.musicplayer.model;
+package com.landeting.model;
 
 /**
  * 一行歌词：时间点 + 文本。

@@ -2,7 +2,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- 应用默认主题（无 ActionBar，使用 Toolbar） -->
-    <style name="Theme.MusicPlayer" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.Landeting" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryVariant">@color/primary_dark</item>
         <item name="colorOnPrimary">@android:color/white</item>
@@ -11,7 +11,7 @@
     </style>
 
     <!-- 播放页：沉浸式深色主题 -->
-    <style name="Theme.MusicPlayer.Player" parent="Theme.MusicPlayer">
+    <style name="Theme.Landeting.Player" parent="Theme.Landeting">
         <item name="android:windowBackground">@drawable/bg_player</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:navigationBarColor">@color/player_bg_end</item>

@@ -21,3 +21,9 @@ Thumbs.db
 *.apk
 *.aab
 *.keystore
+
+# 更新控制台运行时数据
+update-console/data/
+# Python 缓存
+__pycache__/
+*.pyc

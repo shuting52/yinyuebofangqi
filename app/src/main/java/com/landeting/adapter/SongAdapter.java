@@ -1,4 +1,4 @@
-package com.loomy.musicplayer.adapter;
+package com.landeting.adapter;
 
 import android.graphics.Color;
 import android.view.LayoutInflater;
@@ -12,9 +12,9 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.loomy.musicplayer.R;
-import com.loomy.musicplayer.model.Song;
-import com.loomy.musicplayer.utils.PlayerManager;
+import com.landeting.R;
+import com.landeting.model.Song;
+import com.landeting.utils.PlayerManager;
 
 import java.util.ArrayList;
 import java.util.List;

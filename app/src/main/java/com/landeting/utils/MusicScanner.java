@@ -1,4 +1,4 @@
-package com.loomy.musicplayer.utils;
+package com.landeting.utils;
 
 import android.content.ContentResolver;
 import android.content.Context;
@@ -6,7 +6,7 @@ import android.database.Cursor;
 import android.provider.MediaStore;
 import android.util.Log;
 
-import com.loomy.musicplayer.model.Song;
+import com.landeting.model.Song;
 
 import java.util.ArrayList;
 import java.util.List;
